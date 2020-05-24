@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "vm1265"
+        },
+        "networkSecurityGroupName": {
+            "value": "vm1-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "default-allow-ssh",
+                    "properties": {
+                        "priority": 1000,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceApplicationSecurityGroups": [],
+                        "destinationApplicationSecurityGroups": [],
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "sbnet1"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/5564064a-c370-4d32-8d5d-fc119c7d5f72/resourceGroups/Virtualmachine/providers/Microsoft.Network/virtualNetworks/vnet1"
+        },
+        "virtualMachineName": {
+            "value": "vm9"
+        },
+        "virtualMachineRG": {
+            "value": "Virtualmachine"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ls"
+        },
+        "adminUsername": {
+            "value": "akshay123"
+        },
+        "adminPassword": {
+            "value": "akshayKalra123"
+        },
+        "zone": {
+            "value": "1"
+        }
+    }
+}
